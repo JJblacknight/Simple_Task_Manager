@@ -21,7 +21,7 @@ This is a basic Task Manager app built using [React Native](https://reactnative.
 First, clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/JJblacknight/Simple-Task-Manager.git
+git clone https://github.com/JJblacknight/Simple_Task_Manager.git
 cd Simple-Task-Manager
 npm install
 # or
