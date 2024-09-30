@@ -15,7 +15,7 @@ export default function TabLayout() {
         headerShown: false,
       }}>
       <Tabs.Screen
-        name="index"
+        name="Task Manager"
         options={{
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (

@@ -1,50 +1,45 @@
-# Welcome to your Expo app 👋
+# Simple Task Manager App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a basic Task Manager app built using [React Native](https://reactnative.dev/) and bootstrapped with [Expo](https://expo.dev/). The app allows users to add, view, and manage tasks. It features a clean UI and basic functionality for managing a to-do list.
 
-## Get started
+## Technologies Used
 
-1. Install dependencies
+- React Native
+- Expo
+- TypeScript
+- React Navigation
+- Expo Vector Icons
 
-   ```bash
-   npm install
-   ```
+## Features
 
-2. Start the app
+- Add new tasks with a text input
+- View tasks in a task list
+- Simple, responsive design
 
-   ```bash
-    npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+First, clone the repository and install dependencies:
 
 ```bash
-npm run reset-project
+git clone https://github.com/JJblacknight/Simple-Task-Manager.git
+cd Simple-Task-Manager
+npm install
+# or
+yarn install
 ```
+Then run the develoopment server:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+```bash
+npx expo start
+```
+Open the app in a web browser.
 
-## Learn more
+## Prject Structure
 
-To learn more about developing your project with Expo, look at the following resources:
+The folllowing is a brief overview of the project structure:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+``bash
+📦 Simple-Task-Manager
+ ┣ 📂app
+ ┣ 📂app-example 
+ ┣ 📂components     
