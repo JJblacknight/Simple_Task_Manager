@@ -34,7 +34,7 @@ npx expo start
 ```
 Open the app in a web browser.
 
-## Prject Structure
+## Project Structure
 
 The folllowing is a brief overview of the project structure:
 

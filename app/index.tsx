@@ -1,12 +1,17 @@
-import React, { useState } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import React, { useState, useLayoutEffect } from "react";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import InputComponent from "../components/InputComponent"; // Input component for adding tasks
 import TaskListComponent from "../components/TaskListComponent"; // Task list component to display tasks
 
 export default function Index() {
   // State variable to store the list of tasks
   const [tasks, setTasks] = useState<{ id: string; text: string; completed: boolean }[]>([]);
-  
+
+  // Set the title of the application
+  useLayoutEffect(() => {
+    document.title = "Simple Task Manager App";
+  }, []);
+
   // Function to add a task
   const addTask = (task: string) => {
     const newTask = {
@@ -37,19 +42,27 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Task Manager</Text>
+      
+      {/* Summary of the application */}
+      <Text style={styles.summary}>
+        This is a simple task manager application where you can add, complete, and delete tasks.
+      </Text>
 
       {/* Input component to add new tasks */}
       <InputComponent onAddTask={addTask} />
 
-      {/* Container for the current list of tasks */}
-      <View style={styles.taskListContainer}>
-        <Text style={styles.taskListTitle}>Current List</Text>
-        <TaskListComponent
-          tasks={tasks}
-          onCompleteTask={completeTask}
-          onDeleteTask={deleteTask}
-        />
-      </View>
+      {/* ScrollView for scrolling task list */}
+      <ScrollView contentContainerStyle={styles.scrollView} horizontal={true}>
+        <View style={styles.taskContainer}>
+          <Text style={styles.subtitle}>Current List</Text>
+          {/* Task list component to display and manage tasks */}
+          <TaskListComponent
+            tasks={tasks}
+            onCompleteTask={completeTask}
+            onDeleteTask={deleteTask}
+          />
+        </View>
+      </ScrollView>
     </View>
   );
 }
@@ -67,11 +80,20 @@ const styles = StyleSheet.create({
     fontWeight: "bold", // Bold font
     marginBottom: 20, // Space below the title
   },
-  taskListContainer: {
+  summary: {
+    fontSize: 16,
+    marginBottom: 20, // Space below the summary
+    textAlign: "center",
+  },
+  scrollView: {
+    width: '100%',
+    paddingBottom: 20, // To allow scrolling
+  },
+  taskContainer: {
     width: '100%',
     marginTop: 20,
   },
-  taskListTitle: {
+  subtitle: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 10,
